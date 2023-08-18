@@ -9,7 +9,7 @@ const state = proxy({
   currentModel: 0,
   model: models[0],
   logoDecal: './icon.png',
-  fullDecal: './texture.jpg',
+  fullDecal: './texture.png',
 });
 
 export default state;

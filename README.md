@@ -11,7 +11,7 @@ Discover the limitless possibilities of self-expression with Fabriqo's cutting-e
 Fabriqo is deployed to Vercel. You can try it on the following URL: [fabriqo.vercel.app](https://fabriqo.vercel.app/).
 
 <div align="center">
-  <img src="client/public/mockup.png" />
+  <img src="client/public/mockup1.png" />
 </div>
 
 ## Technologies Used
