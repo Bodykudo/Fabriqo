@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+.app {
+  @apply relative h-screen w-full overflow-hidden;
+}
+
+.home {
+  @apply absolute z-10 flex w-fit flex-col items-start justify-start p-6 max-xl:gap-7 sm:p-8 xl:h-full xl:justify-between xl:px-36 xl:py-8;
+}
+
+.home-content {
+  @apply flex flex-1 flex-col justify-start gap-10 xl:justify-center;
+}
+
+.head-text {
+  @apply text-[6rem] font-black leading-[7rem] text-black xl:text-[10rem] xl:leading-[11rem];
+}
+
+.download-btn {
+  @apply glassmorphism flex h-14 w-14 cursor-pointer items-center justify-center rounded-full outline-none;
+}
+
+.editortabs-container {
+  @apply glassmorphism ml-1 flex w-16 flex-col items-center justify-center gap-4 rounded-lg border-[2px] py-4;
+}
+
+.filtertabs-container {
+  @apply absolute bottom-5 left-0 right-0 z-10 flex w-full flex-wrap items-center justify-center gap-4;
+}
+
+.aipicker-container {
+  @apply glassmorphism absolute left-full ml-3 flex h-[220px] w-[195px] flex-col gap-4 rounded-md p-3;
+}
+
+.aipicker-textarea {
+  @apply w-full flex-1 border border-gray-300 bg-transparent p-2 text-sm outline-none;
+}
+
+.filepicker-container {
+  @apply glassmorphism absolute left-full ml-3 flex h-[220px] w-[195px] flex-col rounded-md p-3;
+}
+
+.filepicker-label {
+  @apply w-fit cursor-pointer rounded-md border border-gray-300 px-2 py-1.5 text-xs text-gray-700 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500;
+}
+
+.tab-btn {
+  @apply flex h-14 w-14 cursor-pointer select-none items-center justify-center;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type='file'] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+.sketch-picker {
+  width: 170px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.sketch-picker > div:nth-child(3) {
+  display: none !important;
+}
