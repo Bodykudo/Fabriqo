@@ -76,7 +76,9 @@ function Customizer() {
 
       // Remove in case of final product instead of demo
       if (environment === 'production') {
-        toast.error("You can't use use AI in this demo version.");
+        setTimeout(() => {
+          toast.error("You can't use use AI in this demo version.");
+        }, 1500);
         return;
       }
 

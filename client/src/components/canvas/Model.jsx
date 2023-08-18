@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import { useFrame } from '@react-three/fiber';
 import { Decal, useGLTF, useTexture } from '@react-three/drei';
@@ -9,10 +8,6 @@ import state from '../../store';
 function Model({ path, isGroup, nodesTitle }) {
   const snap = useSnapshot(state);
   const { nodes, materials } = useGLTF(path);
-
-  useEffect(() => {
-    console.log(nodes, materials);
-  }, []);
 
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
